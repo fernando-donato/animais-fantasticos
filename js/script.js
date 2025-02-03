@@ -4,7 +4,7 @@ import TabNav from "./modules/tabnav.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
 import DropdownMenu from "./modules/dropdownmenu.js";
-import initMenuMobile from "./modules/menu-mobile.js";
+import MenuMobile from "./modules/menu-mobile.js";
 import initAnimaNumeros from "./modules/anima-numeros.js";
 import ScrollAnima from "./modules/scroll-anima.js";
 
@@ -33,10 +33,13 @@ tooltip.init();
 const ScrollAnima = new ScrollAnima();
 ScrollAnima.init();
 
-const dropdownMenu = new dropdowMenu("[data-dropdown]");
-dropdownMenu.init();
+const DropdownMenu = new dropdowMenu("[data-dropdown]");
+DropdownMenu.init();
 
-initMenuMobile();
+const menuMobile = new MenuMobile('[data-menu="button"]','[data-menu="list"]')
+menuMobile.init()
+
+
 initAnimaNumeros();
 
 //const animais = document.getElementById("animais");
